@@ -249,3 +249,37 @@ export const FILTERS_BUTTONS = {
   },
 } as const
 
+
+export const NEW_ORDER = {
+  id: crypto.randomUUID(),
+  name: "Extra Burger",
+  description: "Description 4",
+  date: "2020-01-01",
+  image: "https://png.pngtree.com/png-clipart/20230907/ourmid/pngtree-a-transparent-burger-free-png-image_10021166.png",
+  status: "pending",
+  products: [
+    {
+      id: crypto.randomUUID(),
+      name: "Meat",
+      description: "Description 5",
+      price: 100,
+      image: "https://via.placeholder.com/150",
+    },
+    {
+      id: crypto.randomUUID(),
+      name: "Bread",
+      description: "Description 6",
+      price: 200,
+      image: "https://via.placeholder.com/150",
+    },
+  ],
+  user: {
+    id: crypto.randomUUID(),
+    name: "Fernando",
+    lastname: "Montero",
+    email: "",
+  },
+  quantity: 1,
+  price: 25.00,
+}
+

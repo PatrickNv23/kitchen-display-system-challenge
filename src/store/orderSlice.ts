@@ -32,14 +32,10 @@ export const orderSlice = createSlice({
       if (order) {
         order.status = 'cancelled'
       }
-    },
-
-    getSelectedOrders: (state, action: PayloadAction<string>) => {
-      return state.filter((order) => order.id === action.payload || "pending")
     }
   },
 })
 
-export const { addOrder, assignStatusInProcess, assignStatusInCompleted, assignStatusInCancelled, getSelectedOrders } = orderSlice.actions
+export const { addOrder, assignStatusInProcess, assignStatusInCompleted, assignStatusInCancelled } = orderSlice.actions
 
 export default orderSlice.reducer

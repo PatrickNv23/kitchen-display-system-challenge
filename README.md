@@ -6,7 +6,7 @@
 
 <div align="center">
   <h3>
-    <a href="https://patricknv23windbnb.netlify.app">
+    <a href="https://patricknv23kitchendisplaysystem.netlify.app">
       Demo
     </a>
     <span> | </span>
@@ -33,11 +33,11 @@
 
 ![screenshot](https://raw.githubusercontent.com/PatrickNv23/kitchen-display-system-challenge/main/src/assets/screenshots/home.png)
 
-- Where can I see your demo?
+- Where can I see your demo?  
   This application is an ordering system to improve the experience and speed in order processing.
-- What was your experience?
+- What was your experience?  
   My experience was good, since the technologies used helped me create a scalable project, with good performance and a friendly interface.
-- What have you learned/improved?
+- What have you learned/improved?  
   I learned state management with Redux Toolkit, style management with Styled components and react project management using Typescript, these technologies are very powerful together and allow you to carry out quality projects.
 
 

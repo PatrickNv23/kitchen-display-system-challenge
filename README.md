@@ -23,15 +23,15 @@
 - [Overview](#overview)
 - [Built With](#built-with)
 - [Features](#features)
-- [How to use](#how-to-use)
 - [Good Practices](#good-practices)
+- [How to use](#how-to-use)
 - [Contact](#contact)
 
 <!-- OVERVIEW -->
 
 ## Overview
 
-![screenshot](https://raw.githubusercontent.com/PatrickNv23/Windbnb-devChallenge/main/src/assets/windbnb-1.png)
+![screenshot](https://raw.githubusercontent.com/PatrickNv23/kitchen-display-system-challenge/main/src/assets/screenshots/home.png)
 
 - Where can I see your demo?
   This application is an ordering system to improve the experience and speed in order processing.

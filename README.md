@@ -1,30 +1,91 @@
-# React + TypeScript + Vite
+<h1 align="center">Kitchen Display System Challenge</h1>
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+<div align="center">
+   Solution to a challenge for a position as a junior frontend developer.
+</div>
 
-Currently, two official plugins are available:
+<div align="center">
+  <h3>
+    <a href="https://patricknv23windbnb.netlify.app">
+      Demo
+    </a>
+    <span> | </span>
+    <a href="https://github.com/PatrickNv23/kitchen-display-system-challenge">
+      Solution
+    </a>
+  </h3>
+</div>
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+<!-- TABLE OF CONTENTS -->
 
-## Expanding the ESLint configuration
+## Table of Contents
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+- [Overview](#overview)
+- [Built With](#built-with)
+- [Features](#features)
+- [How to use](#how-to-use)
+- [Good Practices](#good-practices)
+- [Contact](#contact)
 
-- Configure the top-level `parserOptions` property like this:
+<!-- OVERVIEW -->
 
-```js
-export default {
-  // other rules...
-  parserOptions: {
-    ecmaVersion: 'latest',
-    sourceType: 'module',
-    project: ['./tsconfig.json', './tsconfig.node.json'],
-    tsconfigRootDir: __dirname,
-  },
-}
+## Overview
+
+![screenshot](https://raw.githubusercontent.com/PatrickNv23/Windbnb-devChallenge/main/src/assets/windbnb-1.png)
+
+- Where can I see your demo?
+  This application is an ordering system to improve the experience and speed in order processing.
+- What was your experience?
+  My experience was good, since the technologies used helped me create a scalable project, with good performance and a friendly interface.
+- What have you learned/improved?
+  I learned state management with Redux Toolkit, style management with Styled components and react project management using Typescript, these technologies are very powerful together and allow you to carry out quality projects.
+
+
+### Built With
+
+- [React](https://es.react.dev/)
+- [Styled Components](https://styled-components.com/)
+- [Redux Toolkit](https://redux-toolkit.js.org/)
+- [Typescript](https://www.typescriptlang.org/)
+- [React Awesome Reveal](https://react-awesome-reveal.morello.dev/)
+
+## Features
+
+- Show a list of orders.
+- Each order must include basic details such as product list and quantity.
+- Orders must be displayed in real time on the Kitchen Display System (currently simulated without backend).
+- Implement filtering functionality to show only pending, in-process, completed or cancelled orders.
+- Implement order management functionality, such as marking orders as completed or canceled.
+
+## Good Practices
+
+- Typed variables and typed entities.
+- Separation of components and features by folders.
+- Data management in external files.
+- State management with reducer functions (Redux Toolkit).
+- Management of global and component styles (Styled components).
+- Application tests in different resolutions.
+- Typed props on components.
+- Images in Webp format.
+
+## How To Use
+
+<!-- Example: -->
+
+To clone and run this application, you'll need [Git](https://git-scm.com) and [Node.js](https://nodejs.org/en/download/) (which comes with [npm](http://npmjs.com)) installed on your computer. From your command line:
+
+```bash
+# Clone this repository, I used Vite instead of React-create-app
+$ git clone https://github.com/PatrickNv23/kitchen-display-system-challenge
+
+# Install dependencies
+$ npm install
+
+# Run the app with Vite
+$ npm run dev
 ```
 
-- Replace `plugin:@typescript-eslint/recommended` to `plugin:@typescript-eslint/recommended-type-checked` or `plugin:@typescript-eslint/strict-type-checked`
-- Optionally add `plugin:@typescript-eslint/stylistic-type-checked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and add `plugin:react/recommended` & `plugin:react/jsx-runtime` to the `extends` list
+## Contact
+
+- GitHub [@PatrickNv23](https://github.com/PatrickNv23)
+- Portfolio [PatrickNv23](https://patricknv23.netlify.app/)

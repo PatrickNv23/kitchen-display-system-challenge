@@ -1,12 +1,15 @@
+import { ORDERSTATUS, FILTER_ALL } from "./data";
+
 export interface Order {
   id: string;
   name: string;
   description: string;
   date: string;
   image: string;
-  status: OrderStatus
+  status: OrderStatusType;
   products: Product[];
   user: User;
+  quantity: number;
 }
 
 export interface Product {
@@ -24,4 +27,6 @@ export interface User {
   email: string;
 }
 
-export type OrderStatus = "pending" | "in process" | "completed" | "cancelled"
+export type OrderStatusType = ORDERSTATUS.PENDING | ORDERSTATUS.IN_PROCESS | ORDERSTATUS.COMPLETED | ORDERSTATUS.CANCELLED
+
+export type FilterType = FILTER_ALL | OrderStatusType

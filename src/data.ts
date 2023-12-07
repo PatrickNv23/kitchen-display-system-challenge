@@ -1,5 +1,3 @@
-// Crea un array de 10 pedidos de prueba
-
 import { Order } from "./types";
 
 export const orders: Order[] = [
@@ -32,6 +30,7 @@ export const orders: Order[] = [
       lastname: "Lastname 1",
       email: "",
     },
+    quantity: 1,
   },
   {
     id: crypto.randomUUID(),
@@ -62,6 +61,7 @@ export const orders: Order[] = [
       lastname: "Lastname 2",
       email: "",
     },
+    quantity: 1,
   },
   {
     id: crypto.randomUUID(),
@@ -92,5 +92,35 @@ export const orders: Order[] = [
       lastname: "Lastname 3",
       email: "",
     },
+    quantity: 1,
   }
 ]
+
+export const ORDERSTATUS = {
+  PENDING: "pending",
+  IN_PROCESS: "in process",
+  COMPLETED: "completed",
+  CANCELLED: "cancelled"
+} as const
+
+export const FILTER_ALL = "all" as const
+
+export const FILTERS_BUTTONS = {
+  [FILTER_ALL]: {
+    label: "All",
+    value: FILTER_ALL
+  },
+  [ORDERSTATUS.PENDING]: {
+    label: "Pending",
+    value: ORDERSTATUS.PENDING
+  },
+  [ORDERSTATUS.IN_PROCESS]: {
+    label: "In process",
+    value: ORDERSTATUS.IN_PROCESS
+  },
+  [ORDERSTATUS.COMPLETED]: {
+    label: "Completed",
+    value: ORDERSTATUS.COMPLETED
+  },
+} as const
+

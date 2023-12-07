@@ -8,14 +8,15 @@ import { useEffect } from 'react'
 import { addOrder } from '../store/orderSlice.ts'
 import { NEW_ORDER } from '../data.ts'
 import { Order } from '../types'
+import { Dispatch, UnknownAction } from '@reduxjs/toolkit'
 
 export const OrderList: React.FC<unknown> = () => {
 
   const [filterSelected, setFilterSelected] = useState<string>("all");
-  const orders = useSelector((state: RootState) => state.orders)
-  const dispatch = useDispatch()
+  const orders: Order[] = useSelector((state: RootState) => state.orders)
+  const dispatch: Dispatch<UnknownAction> = useDispatch()
 
-  const selectedOrders = filterSelected === "all" ? orders : [...orders].filter((order) => order.status === filterSelected && order.status !== "all")
+  const selectedOrders: Order[] = filterSelected === "all" ? orders : [...orders].filter((order) => order.status === filterSelected && order.status !== "all")
 
   useEffect(() => {
     const intervalId = setTimeout(() => {
@@ -39,7 +40,7 @@ export const OrderList: React.FC<unknown> = () => {
       <FilterList filterSelected={filterSelected} onFilterChange={handleSelectedFilter} />
       <FlexContainer>
         {
-          selectedOrders.map((order) => (
+          selectedOrders.map((order: Order) => (
             <OrderItem key={order.id} order={order} />
           ))
         }

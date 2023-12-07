@@ -50,6 +50,13 @@ export const Button = styled.button<{ $buttonstyle?: string }>`
     color: #fff7ed;
     transform: scale(1.05);
   }
+  
+  @media (max-width: 350px) {
+    margin: 0 10px;
+    width: auto;
+    max-width: 100%;
+    font-size: 10px;
+  }
 `;
 
 export const Card = styled.div`
@@ -67,6 +74,12 @@ export const Card = styled.div`
     transform: scale(1.02);
     transition: all 0.3s ease-in-out;
     background-color: #fed7aa;
+  }
+
+  @media (max-width: 350px) {
+    margin: 0 10px;
+    width: auto;
+    max-width: 100%;
   }
 `;
 

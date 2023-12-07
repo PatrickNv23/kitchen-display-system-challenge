@@ -29,6 +29,10 @@ export const FilterListHeader = styled.header`
     align-items: center;
     flex-wrap: wrap;
     list-style: none;
+
+    @media (max-width: 480px) {
+      justify-content: center;
+    }
   }
 `;
 

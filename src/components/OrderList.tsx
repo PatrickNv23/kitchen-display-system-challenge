@@ -4,6 +4,7 @@ import OrderItem from './OrderItem.tsx'
 import { Order } from '../types'
 import { FilterList } from './FilterList.tsx'
 import { useState } from 'react'
+import { FlexContainer } from '../globalStyles.ts'
 
 
 export const OrderList: React.FC<unknown> = () => {
@@ -52,12 +53,13 @@ export const OrderList: React.FC<unknown> = () => {
   return (
     <>
       <FilterList filterSelected={filterSelected} onFilterChange={handleSelectedFilter} />
-      {
-        selectedOrders.map((order) => (
-          <OrderItem key={order.id} order={order} />
-        ))
-      }
-
+      <FlexContainer>
+        {
+          selectedOrders.map((order) => (
+            <OrderItem key={order.id} order={order} />
+          ))
+        }
+      </FlexContainer>
     </>
   )
 }

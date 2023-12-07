@@ -1,4 +1,4 @@
-import { ORDERSTATUS, FILTER_ALL } from "./data";
+import { ORDERSTATUS, FILTER_ALL } from "../api/data";
 
 export interface Order {
   id: string;

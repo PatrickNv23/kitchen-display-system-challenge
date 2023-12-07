@@ -31,9 +31,9 @@ export const OrderItemIconContainer = styled.span`
 
 export const OrderItemImage = styled.img`
   width: 100%;
-  min-height: 200px;
-  height: auto;
-  min-height: 200px;
+  height: 300px;
+  max-height: 300px;
+  min-height: auto;
   object-fit: cover;
 `;
 

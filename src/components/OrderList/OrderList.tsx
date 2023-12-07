@@ -1,14 +1,15 @@
-import type { RootState } from '../store/store.ts'
+import type { RootState } from '../../store/store.ts'
 import { useSelector, useDispatch } from 'react-redux'
-import OrderItem from './OrderItem.tsx'
-import { FilterList } from './FilterList.tsx'
+import OrderItem from '../OrderItem/OrderItem.tsx'
+import { FilterList } from '../FilterList/FilterList.tsx'
 import { useState } from 'react'
-import { FlexContainer } from '../globalStyles.ts'
+import { FlexContainer } from '../../globalStyles.ts'
 import { useEffect } from 'react'
-import { addOrder } from '../store/orderSlice.ts'
-import { NEW_ORDER } from '../data.ts'
-import { Order } from '../types'
+import { addOrder } from '../../store/orderSlice.ts'
+import { NEW_ORDER } from '../../api/data.ts'
+import { Order } from '../../types/types'
 import { Dispatch, UnknownAction } from '@reduxjs/toolkit'
+import { NotFoundOrders } from './OrderListSyle.tsx'
 
 export const OrderList: React.FC<unknown> = () => {
 
@@ -38,11 +39,14 @@ export const OrderList: React.FC<unknown> = () => {
   return (
     <>
       <FilterList filterSelected={filterSelected} onFilterChange={handleSelectedFilter} />
-      <FlexContainer>
+      <FlexContainer $center='center'>
         {
-          selectedOrders.map((order: Order) => (
+          selectedOrders && selectedOrders.map((order: Order) => (
             <OrderItem key={order.id} order={order} />
           ))
+        }
+        {
+          selectedOrders.length === 0 && <NotFoundOrders>No orders found</NotFoundOrders>
         }
       </FlexContainer>
     </>

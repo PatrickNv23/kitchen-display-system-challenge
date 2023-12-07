@@ -1,5 +1,5 @@
 import styled, { createGlobalStyle } from "styled-components";
-import { ORDERSTATUS } from "./data";
+import { ORDERSTATUS } from "./api/data";
 
 export const GlobalStyle = createGlobalStyle`
   body {
@@ -21,12 +21,14 @@ export const GeneralContainer = styled.div`
   min-height: 100vh;
 `;
 
-export const FlexContainer = styled.div<{ column?: string; center?: string }>`
+export const FlexContainer = styled.div<{ $column?: string; $center?: string }>`
   display: flex;
-  flex-direction: ${(props) => (props.column ? "column" : "row")};
-  justify-content: ${(props) => (props.center ? "center" : "space-between")};
-  align-items: ${(props) => (props.center ? "center" : "flex-start")};
+  flex-direction: ${(props) => (props.$column ? "column" : "row")};
+  justify-content: ${(props) => (props.$center ? "center" : "space-between")};
+  align-items: ${(props) => (props.$center ? "center" : "flex-start")};
   flex-wrap: wrap;
+  min-height: 100vh;
+  height: 100%;
 `;
 
 export const Button = styled.button<{ $buttonstyle?: string }>`
@@ -54,12 +56,11 @@ export const Card = styled.div`
   min-width:auto;
   width: 100%;
   max-width: 300px;
-  /* margin: 20px auto; */
   padding: 20px;
   border: 1px solid #f97316;
   border-radius: 3px;
   height: auto;
-  min-height: 600px;
+  min-height: 300px;
   cursor: pointer;
 
   &:hover {

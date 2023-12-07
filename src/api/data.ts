@@ -1,4 +1,10 @@
-import { Order } from "./types";
+import { Order } from "../types/types";
+import broaster from "../assets/orderImages/broaster.webp";
+import hamburguer from "../assets/orderImages/hamburguer.webp";
+import grilledSteak from "../assets/orderImages/grilledSteak.webp";
+import strawberryCheesecake from "../assets/orderImages/strawberryCheesecake.webp";
+import sundaeDelights from "../assets/orderImages/sundaeDelights.webp";
+import cheeseBurguerCombo from "../assets/orderImages/cheeseBurguerCombo.webp";
 
 export const orders: Order[] = [
   {
@@ -6,7 +12,7 @@ export const orders: Order[] = [
     name: "Hamburger",
     description: "Hamburger with fries and beef",
     date: "2020-01-01",
-    image: "https://png.pngtree.com/png-clipart/20230907/ourmid/pngtree-a-transparent-burger-free-png-image_10021166.png",
+    image: hamburguer,
     status: "pending",
     products: [
       {
@@ -36,9 +42,9 @@ export const orders: Order[] = [
   {
     id: crypto.randomUUID(),
     name: "Broaster Chicken",
-    description: "Broaster chicken with fried potatoes and creams",
+    description: "Broaster chicken with fried potatoes",
     date: "2020-01-01",
-    image: "https://www.brostermania.com/wp-content/uploads/2021/08/Imagen-Slider-01.png",
+    image: broaster,
     status: "pending",
     products: [
       {
@@ -70,7 +76,7 @@ export const orders: Order[] = [
     name: "Grilled Steak",
     description: "grilled steak with fries and salad",
     date: "2020-01-01",
-    image: "https://i.pinimg.com/originals/57/86/6e/57866e987aa1ef144db99b316ba534c9.png",
+    image: grilledSteak,
     status: "pending",
     products: [
       {
@@ -102,7 +108,7 @@ export const orders: Order[] = [
     name: "Cheeseburger Combo",
     description: "Classic cheeseburger with fries and a drink",
     date: "2023-05-12",
-    image: "https://feedingthefiya.com/wp-content/uploads/2016/03/prov_201312011049256070.png",
+    image: cheeseBurguerCombo,
     status: "pending",
     products: [
       {
@@ -141,7 +147,7 @@ export const orders: Order[] = [
     name: "Sundae Delight",
     description: "Vanilla ice cream with chocolate sauce, whipped cream, and nuts",
     date: "2023-06-05",
-    image: "https://www.mayfielddairy.com/wp-content/uploads/2022/02/MF_SundaeDelights-CookiesCream-800x734.png",
+    image: sundaeDelights,
     status: "pending",
     products: [
       {
@@ -181,7 +187,7 @@ export const orders: Order[] = [
     name: "Strawberry Cheesecake",
     description: "Creamy cheesecake with fresh strawberry topping",
     date: "2023-06-08",
-    image: "https://covetedcakes.com/wp-content/uploads/2023/10/wild-strawberries-and-cream-slice.png",
+    image: strawberryCheesecake,
     status: "pending",
     products: [
       {
@@ -253,9 +259,9 @@ export const FILTERS_BUTTONS = {
 export const NEW_ORDER = {
   id: crypto.randomUUID(),
   name: "Extra Burger",
-  description: "Description 4",
+  description: "Extra hamburguer with fries",
   date: "2020-01-01",
-  image: "https://png.pngtree.com/png-clipart/20230907/ourmid/pngtree-a-transparent-burger-free-png-image_10021166.png",
+  image: hamburguer,
   status: "pending",
   products: [
     {

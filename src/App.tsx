@@ -1,5 +1,4 @@
-import './App.css'
-import { OrderList } from './components/OrderList'
+import { OrderList } from './components/OrderList/OrderList'
 import { GeneralContainer, Title } from './globalStyles'
 
 function App() {

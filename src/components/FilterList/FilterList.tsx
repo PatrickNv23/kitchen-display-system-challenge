@@ -1,6 +1,6 @@
 import React from 'react'
-import { FilterType } from '../types'
-import { FILTERS_BUTTONS } from '../data'
+import { FilterType } from '../../types/types'
+import { FILTERS_BUTTONS } from '../../api/data'
 import { FilterLabel, FilterListHeader } from './FilterListStyles'
 
 interface FilterContainerProps {

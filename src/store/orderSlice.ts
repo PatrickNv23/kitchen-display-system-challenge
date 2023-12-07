@@ -1,7 +1,7 @@
 import { createSlice } from '@reduxjs/toolkit'
 import type { PayloadAction } from '@reduxjs/toolkit'
-import { Order } from '../types'
-import { orders, ORDERSTATUS } from '../data'
+import { Order } from '../types/types'
+import { orders, ORDERSTATUS } from '../api/data'
 
 const initialState: Array<Order> = orders
 

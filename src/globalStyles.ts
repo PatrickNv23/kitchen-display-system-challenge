@@ -51,17 +51,19 @@ export const Button = styled.button<{ $buttonstyle?: string }>`
 `;
 
 export const Card = styled.div`
+  min-width:auto;
   width: 100%;
   max-width: 300px;
-  margin: 20px auto;
+  /* margin: 20px auto; */
   padding: 20px;
   border: 1px solid #f97316;
   border-radius: 3px;
   height: auto;
+  min-height: 600px;
   cursor: pointer;
 
   &:hover {
-    transform: scale(1.05);
+    transform: scale(1.02);
     transition: all 0.3s ease-in-out;
     background-color: #fed7aa;
   }
@@ -71,10 +73,7 @@ export const Title = styled.h1`
   font-size: 24px;
   color: #f97316;
   text-align: center;
+  cursor: pointer;
 `;
 
-export const FilterTitle = styled.p`
-  font-size: 20px;
-  color: #f97316;
-  text-align: center;
-`;
+

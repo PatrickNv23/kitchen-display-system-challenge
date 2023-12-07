@@ -1,6 +1,7 @@
 import React from 'react'
 import { FilterType } from '../types'
 import { FILTERS_BUTTONS } from '../data'
+import { FilterLabel, FilterListHeader } from './FilterListStyles'
 
 interface FilterContainerProps {
   filterSelected: FilterType
@@ -9,26 +10,25 @@ interface FilterContainerProps {
 
 export const FilterList: React.FC<FilterContainerProps> = ({ filterSelected, onFilterChange }) => {
   return (
-    <header>
+    <FilterListHeader>
       <nav>
         <ul>
           {
             Object.entries(FILTERS_BUTTONS).map(([key, { label, value }]) => {
               const isSelected = key === filterSelected
               return (
-                <li key={key}
-                  className={isSelected ? 'selected' : ''}
+                <FilterLabel $isSelected={isSelected} key={key}
                   onClick={() => {
                     onFilterChange(value)
                   }}
                 >
                   {label}
-                </li>
+                </FilterLabel>
               )
             })
           }
         </ul>
       </nav>
-    </header>
+    </FilterListHeader>
   )
 }

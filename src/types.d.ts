@@ -10,6 +10,7 @@ export interface Order {
   products: Product[];
   user: User;
   quantity: number;
+  price: number;
 }
 
 export interface Product {
